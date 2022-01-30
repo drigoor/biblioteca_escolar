@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'models/livro.dart';
-import 'package:biblioteca_escolar/screens/livro_detalhado.dart';
+import 'package:biblioteca_escolar/screens/lista_de_livros.dart';
 
 final livros = gerarLivrosAleatorios();
 
@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Biblioteca Escolar Virtual',
-      home: LivroDetalhado(livro: livros[0]),
+      home: ListaDeLivros(
+        livros: livros,
+      ),
     );
   }
 }
